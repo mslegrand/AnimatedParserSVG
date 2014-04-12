@@ -1,0 +1,26 @@
+Animation via SMIL
+
+Simplest method.
+
+Not natively supported by IE (and never will be). Can use FakeSmile for IE. This won't work with <img> tag as <img> doesn't allow use of JavaScript.
+
+Reloading HTML page does not restart animation in Firefox and Chrome. 
+One must explicitly force the image to reload via, for example, 
+for Firefox ;
+    onclick="getElementById('image_smil').src='flash_bars_smil.svg'" 
+and 
+or Chrome:
+    onclick="getElementById('image_smil').src='flash_bars_smil.svg?'+new Date().getMilliseconds()" 
+
+(Aside: neither form works with Opera.)
+
+Onclick usage:
+i
+n javascript the we have
+object.onclick=function(){SomeJavaScriptCode};
+
+in html:
+<element onclick="SomeJavaScriptCode">
+Examples:
+<button id="a" onclick="Foo()">Button A</button>
+document.getElementById("a").onclick = Bar;
